@@ -32,11 +32,11 @@ def send_file_path_to_api(api_url, file_path):
         print(f"Failed to send file path {file_path}: {e}")
 
 
-# Directory containing downloaded files
-download_dir = r"D:\READING_Files\PRTR\LECCOPYERRORHANDLE\excel"
+
+download_dir = ""# Directory containing downloaded files
 
 # API endpoint to upload files
-api_url = "https://localhost:44354/api/LEOCopy_Excel/Get"
+api_url = "APIURL"
 
 # Iterate over all files in the download directory
 for file_name in os.listdir(download_dir):
