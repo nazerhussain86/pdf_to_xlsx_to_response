@@ -54,63 +54,10 @@ def download_file(url, save_path):
 
 
 # List of file URLs to download
-file_urls = ["https://dms.impexcube.in/MailRead/Export/PRTR/CHN/pdf/671106624122024INMAA1SB22301220241652.pdf",
-"https://dms.impexcube.in/MailRead/Export/PRTR/CHN/pdf/686810730122024INMAA4SB22301220241754.pdf",
-"https://dms.impexcube.in/MailRead/Export/PRTR/CHN/pdf/868407528032024INMAA1SB22290320241929.pdf",
-"https://dms.impexcube.in/MailRead/Export/PRTR/CHN/pdf/693608022012024INMAA1SB22230120241839.pdf",
-"https://dms.impexcube.in/MailRead/Export/PRTR/CHN/pdf/824813512032024INMAA1SB22130320241636.pdf",
-"https://dms.impexcube.in/MailRead/Export/PRTR/CHN/pdf/841773418032024INMAA1SB22200320241434.pdf",
-"https://dms.impexcube.in/MailRead/Export/PRTR/CHN/pdf/885840903042024INMAA1SB22170420241913.pdf",
-"https://dms.impexcube.in/MailRead/Export/PRTR/CHN/pdf/939721425042024INMAA1SB22010520241400.pdf",
-"https://dms.impexcube.in/MailRead/Export/PRTR/CHN/pdf/998845518052024INMAA1SB22200520241708.pdf",
-"https://dms.impexcube.in/MailRead/Export/PRTR/CHN/pdf/156276910062024INMAA1SB22120620241604.pdf",
-"https://dms.impexcube.in/MailRead/Export/PRTR/CHN/pdf/141409004062024INMAA1SB22130620241522.pdf",
-"https://dms.impexcube.in/MailRead/Export/PRTR/CHN/pdf/196017126062024INMAA1SB22040720241659.pdf",
-"https://dms.impexcube.in/MailRead/Export/PRTR/CHN/pdf/230949610072024INMAA1SB22110720241526.pdf",
-"https://dms.impexcube.in/MailRead/Export/PRTR/CHN/pdf/222337506072024INMAA1SB22120720241814.pdf",
-"https://dms.impexcube.in/MailRead/Export/PRTR/CHN/pdf/228749809072024INMAA1SB22120720241958.pdf",
-"https://dms.impexcube.in/MailRead/Export/PRTR/CHN/pdf/234969211072024INMAA4SB22120720242140.pdf",
-"https://dms.impexcube.in/MailRead/Export/PRTR/CHN/pdf/260167322072024INMAA1SB22250720241454.pdf",
-"https://dms.impexcube.in/MailRead/Export/PRTR/CHN/pdf/275077527072024INMAA1SB22010820241823.pdf",
-"https://dms.impexcube.in/MailRead/Export/PRTR/CHN/pdf/299985306082024INMAA1SB22070820241413.pdf",
-"https://dms.impexcube.in/MailRead/Export/PRTR/CHN/pdf/320156914082024INMAA4SB22160820241553.pdf",
-"https://dms.impexcube.in/MailRead/Export/PRTR/CHN/pdf/307949709082024INMAA1SB22170820241542.pdf",
-"https://dms.impexcube.in/MailRead/Export/PRTR/CHN/pdf/342769323082024INMAA4SB22230820241851.pdf",
-"https://dms.impexcube.in/MailRead/Export/PRTR/CHN/pdf/360299930082024INMAA4SB22030920240755.pdf",
-"https://dms.impexcube.in/MailRead/Export/PRTR/CHN/pdf/368163702092024INMAA1SB22040920241752.pdf",
-"https://dms.impexcube.in/MailRead/Export/PRTR/CHN/pdf/428323824092024INMAA4SB22240920242041.pdf",
-"https://dms.impexcube.in/MailRead/Export/PRTR/CHN/pdf/425867723092024INMAA1SB22250920241715.pdf",
-"https://dms.impexcube.in/MailRead/Export/PRTR/CHN/pdf/462719907102024INMAA1SB22081020242152.pdf",
-"https://dms.impexcube.in/MailRead/Export/PRTR/CHN/pdf/472727710102024INMAA1SB22141020241336.pdf",
-"https://dms.impexcube.in/MailRead/Export/PRTR/CHN/pdf/141041004062024INMAA1SB22141020241807.pdf",
-"https://dms.impexcube.in/MailRead/Export/PRTR/CHN/pdf/472794810102024INMAA1SB22141020241857.pdf",
-"https://dms.impexcube.in/MailRead/Export/PRTR/CHN/pdf/477074211102024INMAA1SB22161020241741.pdf",
-"https://dms.impexcube.in/MailRead/Export/PRTR/CHN/pdf/141041004062024INMAA1SB22171020241522.pdf",
-"https://dms.impexcube.in/MailRead/Export/PRTR/CHN/pdf/485860816102024INMAA1SB22181020241520.pdf",
-"https://dms.impexcube.in/MailRead/Export/PRTR/CHN/pdf/501084622102024INMAA1SB22231020241741.pdf",
-"https://dms.impexcube.in/MailRead/Export/PRTR/CHN/pdf/508653724102024INMAA1SB22251020241650.pdf",
-"https://dms.impexcube.in/MailRead/Export/PRTR/CHN/pdf/512962125102024INMAA4SB22261020241800.pdf",
-"https://dms.impexcube.in/MailRead/Export/PRTR/CHN/pdf/521124228102024INMAA1SB22291020241550.pdf",
-"https://dms.impexcube.in/MailRead/Export/PRTR/CHN/pdf/521227728102024INMAA1SB22291020241550.pdf",
-"https://dms.impexcube.in/MailRead/Export/PRTR/CHN/pdf/513769325102024INMAA4SB22021120242104.pdf",
-"https://dms.impexcube.in/MailRead/Export/PRTR/CHN/pdf/544248808112024INMAA4SB22081120241734.pdf",
-"https://dms.impexcube.in/MailRead/Export/PRTR/CHN/pdf/581458022112024INMAA4SB22271120241910.pdf",
-"https://dms.impexcube.in/MailRead/Export/PRTR/CHN/pdf/599606428112024INMAA4SB22291120242100.pdf",
-"https://dms.impexcube.in/MailRead/Export/PRTR/CHN/pdf/598050128112024INMAA4SB22291120242214.pdf",
-"https://dms.impexcube.in/MailRead/Export/PRTR/CHN/pdf/604692530112024INMAA1SB22021220242002.pdf",
-"https://dms.impexcube.in/MailRead/Export/PRTR/CHN/pdf/601128929112024INMAA1SB22041220241020.pdf",
-"https://dms.impexcube.in/MailRead/Export/PRTR/CHN/pdf/604692530112024INMAA1SB22091220241808.pdf",
-"https://dms.impexcube.in/MailRead/Export/PRTR/CHN/pdf/626222007122024INMAA1SB22101220240053.pdf",
-"https://dms.impexcube.in/MailRead/Export/PRTR/CHN/pdf/604692530112024INMAA1SB22101220240350.pdf",
-"https://dms.impexcube.in/MailRead/Export/PRTR/CHN/pdf/626165707122024INMAA1SB22101220240350.pdf",
-"https://dms.impexcube.in/MailRead/Export/PRTR/CHN/pdf/627836609122024INMAA1SB22111220241953.pdf",
-"https://dms.impexcube.in/MailRead/Export/PRTR/CHN/pdf/626385907122024INMAA1SB22181220241459.pdf",
-"https://dms.impexcube.in/MailRead/Export/PRTR/CHN/pdf/657931119122024INMAA4SB22201220241850.pdf",
-"https://dms.impexcube.in/MailRead/Export/PRTR/CHN/pdf/658901219122024INMAA4SB22201220241922.pdf",
-"https://dms.impexcube.in/MailRead/Export/PRTR/CHN/pdf/656729118122024INMAA1SB22201220241956.pdf",]
+file_urls = [] # give urls to download
 
 # Directory to save downloaded files
-download_dir = r"D:\READING_Files\PRTR\LECCOPYERRORHANDLE"
+download_dir = ""# Directory to save downloaded files
 pdf_dir = os.path.join(download_dir, "pdf")
 excel_dir = os.path.join(download_dir, "excel")
 
